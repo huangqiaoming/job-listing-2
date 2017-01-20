@@ -5,9 +5,10 @@
 <br><br>
 
 <table class="table table-boldered">
-<% @job.each do |job| %>
+<% @jobs.each do |job| %>
 <tr>
 <td>
+  <% render_job_status(job) %>
 <%= link_to(job.title, admin_job_path(job)) %>
 </td>
 <td>
