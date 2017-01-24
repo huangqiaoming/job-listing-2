@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "这个seeds文件可以自动建立一个admin账号，并且创建6个public jobs,以及2个hidden jobs"
+puts "这个seeds文件可以自动建立一个admin账号，并且创建7个public jobs,以及3个hidden jobs"
 
 create_account = User.create([email: '123@gmail.com', password:'123123', password_confirmation: '123123', is_admin: 'true'])
 puts "Admin account created."
@@ -34,6 +34,11 @@ Job.create!([title: "银行电话销售代表", description: "1. 通过拨出电
 2. 确保有效地解決客户的疑问和投诉 ；
 3. 具1-2年客户服务或推销工作经验优先； 4.电脑操作熟练。", wage_upper_bound: 7000, wage_lower_bound: 2000, is_hidden: "false"])
 
+Job.create!([title: "会计师", description: "1、组织执行公司的各项财务制度及操作流程；
+2、协助财务预算的编制，严格执行财务预算，对执行过程中出现的偏差及时报告并予以控制；
+3、对会计凭证进行稽核，及时向集团、税务、银行等部门报送相关报表，组织好财务决算的相关工作，编制财务分析报告；
+4、加强对费用报销、工资核算的稽核与指导，加强对固定资产等相关资产的管理与指导。", wage_upper_bound: 6000, wage_lower_bound: 4100, is_hidden: "false"])
+
 
 
 Job.create!([title: "风险经理", description: "承担二级分行授信资产的贷后管理、风险监控和风险统筹工作；
@@ -42,6 +47,11 @@ Job.create!([title: "风险经理", description: "承担二级分行授信资产
 
 Job.create!([title: "视觉设计师", description: "主要负责发行线的所有代理产品的美术视觉设计支持；基础支持统一登录系统的界面美术设计更迭外；
 2. 主要支持代理产品PC端、手游端、页游端的美术本地化UI优化设计；
-3. 热爱游戏，喜欢钻研，并且希望在设计道路上能够有所积累沉淀，有游戏美术设计希望能够用理性方式分析解决问题意愿者、手绘能力强者优先。", wage_upper_bound: 30000, wage_lower_bound: 20000, is_hidden: "true"])
+3. 热爱游戏，喜欢钻研，并且希望在设计道路上能够有所积累沉淀，有游戏美术设计希望能够用理性方式分析解决问题意愿者、手绘能力强者优先。", wage_upper_bound: 25000, wage_lower_bound: 20000, is_hidden: "true"])
+
+Job.create!([title: "新媒体主编", description: "1、负责新媒体的内容：完成从选题策划、撰稿执行到排版；2、挖掘和分析用户使用习惯、情感及体验感受，即时掌握新闻热点，提供优质、有高度传播性的原创内容；
+3、建立有效运营手段提升用户活跃度，提高关注度；4、有丰富的阅读量和良好的审美能力，对国际时尚潮流有独特的认知与领悟，具有较强的选题、文案策划能力和宽广的知识面；
+5、有扎实的文字功底、优异的方案策划能力，敏锐的新闻敏感及社会热点洞察力，有基本的图片处理能力；", wage_upper_bound: 10000, wage_lower_bound: 60000, is_hidden: "true"])
+
 
 puts "创建成功。"
