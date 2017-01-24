@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts "这个seeds文件可以自动建立一个admin账号，并且创建7个public jobs,以及2个hidden jobs"
+puts "这个seeds文件可以自动建立一个admin账号，并且创建6个public jobs,以及2个hidden jobs"
 
 create_account = User.create([email: '123@gmail.com', password:'123123', password_confirmation: '123123', is_admin: 'true'])
 puts "Admin account created."
@@ -34,9 +34,6 @@ Job.create!([title: "银行电话销售代表", description: "1. 通过拨出电
 2. 确保有效地解決客户的疑问和投诉 ；
 3. 具1-2年客户服务或推销工作经验优先； 4.电脑操作熟练。", wage_upper_bound: 7000, wage_lower_bound: 2000, is_hidden: "false"])
 
-Job.create!([title: "R&D Management Trainee (Electronics Engineer) ", description: "Bachelor degree or above, Knowledge and experience on power electronics, hardware design, analog circuit.
-2、Good inter-personal skills, ability to work in team and cooperate across functions or business units.
-3、Excellent command of English.", wage_upper_bound: 10000, wage_lower_bound: 3000, is_hidden: "false"])
 
 
 Job.create!([title: "风险经理", description: "承担二级分行授信资产的贷后管理、风险监控和风险统筹工作；
