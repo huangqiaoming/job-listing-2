@@ -8,9 +8,6 @@ namespace :admin do
       post :publish
       post :hide
     end
-    collection do
-      get :search
-    end
     resources :resumes
   end
 end
